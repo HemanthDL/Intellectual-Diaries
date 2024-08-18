@@ -1,0 +1,28 @@
+nav,ul{
+    display: flex;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    justify-content: space-between;
+    background-color: rgb(31, 29, 29);
+    color: white;
+    padding: 15px;
+}
+
+li{
+    list-style: none;
+    cursor: pointer;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+ul{
+    gap: 25px;
+}
