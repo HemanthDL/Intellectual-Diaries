@@ -9,7 +9,8 @@ function App() {
   const [cards, setcards] = useState([]);
   const data_fetching = async ()=>{
     let res = await fetch("https://jsonplaceholder.typicode.com/posts");
-    let data = await res.json();
+    let contents = await res.json();
+    let data = contents.sort((a,b)=> 0.5 - Math.random());
     setcards(data);
     console.log("data is : ",data); 
   }

@@ -1,7 +1,17 @@
-import React from 'react'
+import React,{ useState,useEffect } from 'react'
 import "./card.css"
 
 const card = (props) => {
+  const [username, setusername] = useState("");
+  const fetch_user = async()=>{
+    let res = await fetch(`https://jsonplaceholder.typicode.com/users/${props.userId}`);
+    let user = await res.json();
+    setusername(user.name);
+  }
+  useEffect(() => {
+    fetch_user();
+  }, [])
+  
   return (
     <>
       <div className="box">
@@ -13,7 +23,7 @@ const card = (props) => {
           <p>{props.desc}</p>
         </div>
         <div className="postby">
-          <strong>Post By : &nbsp;&nbsp;User ID {props.userId}</strong>
+          <strong>Post By : &nbsp;&nbsp;{username}</strong>
         </div>
       </div>
     </>

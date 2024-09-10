@@ -11,6 +11,7 @@
     background-size: 45% 100%;
     background-position-x : 150%;
     transition: scale 0.5s;
+    cursor: pointer;
 }
 
 .heading{
@@ -25,6 +26,7 @@
    position: absolute;
    bottom: 0;
    right: 0;
+   visibility: hidden;
 }
 .info{
     /* padding: 10px; */
@@ -39,6 +41,9 @@
     /* background: linear-gradient(45deg,rgb(1, 40, 54),rgb(2, 65, 42)); */
     animation: shimmer 1s forwards;
     scale: 1.1;
+    .postby{
+        visibility: visible;
+    }
 }
 
 @keyframes shimmer {
